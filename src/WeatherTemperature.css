@@ -1,3 +1,7 @@
 .WeatherTemperature .unit {
   margin-left: 5px;
 }
+
+.WeatherTemperature {
+  margin: 25px 0px;
+}
