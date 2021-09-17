@@ -1,10 +1,33 @@
+:root {
+  --text-color: #303030;
+  --header-color: #272727;
+  --header: "Montserrat", Helvetica, Arial, sans-serif;
+  --body: Helvetica, Arial, sans-serif;
+}
+
 .Weather {
-  padding: 15px;
+  display: flexbox;
+  justify-content: left;
+  text-align: left;
   border: 1px solid #cecece;
   border-radius: 10px;
-  margin: 0 auto;
-  margin-top: 20px;
-  width: 70%;
+  padding: 16px;
+  margin: 30px auto;
+  width: 600px;
+  font-family: var(--body);
+}
+
+h1 {
+  font-family: "Montserrat", Helvetica, sans-serif;
+  color: var(--header-color);
+  display: block;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 43px;
+}
+
+.Weather form {
+  margin-bottom: 30px;
 }
 
 .Weather .weather-temp img {
@@ -21,41 +44,32 @@
   font-weight: 400;
 }
 
-.Weather .weatherTemp {
-  margin-top: -60px;
-  margin-left: 5px;
-}
-
-.Weather .units {
-  display: block;
-  margin-top: -60px;
-  margin-left: 120px;
-}
-
-.Weather .weather-temp .units {
-  position: relative;
-  font-size: 16px;
-  top: -34px;
-}
-
-.Weather .weatherInfo {
-  color: #707070;
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: left;
-}
-
-.Weather .weatherExtra {
-  margin-left: 170px;
-  margin-top: -24px;
-  margin-bottom: 10px;
-}
-
 .Weather ul {
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 .Weather li {
-  list-style-type: none;
-  padding: 0px;
-  border: none;
+  list-style: none;
+}
+
+.Weather .temperature {
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 64px;
+}
+
+.Weather .icon {
+  height: 64px;
+  width: 64px;
+  float: left;
+  margin-right: 10px;
+}
+
+.Weather .unit {
+  font-size: 16px;
+  position: relative;
+  top: -34px;
+  margin-left: 0px;
+  line-height: 1;
 }

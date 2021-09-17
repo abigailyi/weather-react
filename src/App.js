@@ -6,8 +6,8 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <Weather />
-        <footer className="mt-2">
+        <Weather defaultCity="Los Angeles" />
+        <footer>
           This project was coded by{" "}
           <a
             href="https://eloquent-swartz-9918f7.netlify.app/"
