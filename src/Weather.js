@@ -2,6 +2,7 @@ import axios from "axios";
 import "bootstrap/dist/css/bootstrap.css";
 import React, { useState } from "react";
 import "./Weather.css";
+import Loader from "./Loader";
 
 import WeatherInfo from "./WeatherInfo";
 
@@ -68,6 +69,12 @@ export default function Weather(props) {
     );
   } else {
     search();
-    return <p>Loading...</p>;
+    return (
+      <div className="Loader">
+        <Loader />
+        <br />
+        <p>Loading...</p>
+      </div>
+    );
   }
 }
