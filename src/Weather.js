@@ -1,7 +1,5 @@
 import React from "react";
-import axios from "axios";
 import "./Weather.css";
-import Loader from "react-loader-spinner";
 
 export default function Weather() {
   let weatherData = {
