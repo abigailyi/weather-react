@@ -23,6 +23,14 @@ function App() {
             rel="noreferrer noopener"
           >
             open-sourced on GitHub
+          </a>{" "}
+          and{" "}
+          <a
+            href="https://affectionate-clarke-6d6c81.netlify.app/"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            hosted on Netlify
           </a>
         </footer>
       </div>

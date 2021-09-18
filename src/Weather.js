@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import React, { useState } from "react";
 import "./Weather.css";
 import Loader from "./Loader";
+import WeatherForecast from "./WeatherForecast";
 
 import WeatherInfo from "./WeatherInfo";
 
@@ -15,6 +16,7 @@ export default function Weather(props) {
     setWeatherData({
       ready: true,
       city: response.data.name,
+      coordinates: response.data.coord,
       date: new Date(response.data.dt * 1000),
       temperature: response.data.main.temp,
       description: response.data.weather[0].description,
@@ -25,18 +27,20 @@ export default function Weather(props) {
     });
   }
 
+  //OpenWeather API call to search for weather using city name
   function search() {
     const apiKey = `1e900e7a532291ddab0851fd797f7887`;
     let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
 
+  //On form submit, searches with city value
   function handleSubmit(event) {
     event.preventDefault();
-    // Search for a city
     search(city);
   }
 
+  //On form change, updates city state to search input
   function updateCity(event) {
     setCity(event.target.value);
   }
@@ -65,6 +69,7 @@ export default function Weather(props) {
           </div>
         </form>
         <WeatherInfo data={weatherData} />
+        <WeatherForecast coordinates={weatherData.coordinates} />
       </div>
     );
   } else {
